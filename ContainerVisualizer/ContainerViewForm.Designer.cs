@@ -37,14 +37,14 @@ namespace ContainerVisualizer
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContainerViewForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.interfaceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.implementationnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.displayRegistrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filetStringTextBox = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.clearFilterButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Interface = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Implementation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.displayRegistrationBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -58,9 +58,9 @@ namespace ContainerVisualizer
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.interfaceNameDataGridViewTextBoxColumn,
-            this.implementationnameDataGridViewTextBoxColumn,
-            this.Name});
+            this.Name,
+            this.Interface,
+            this.Implementation});
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 20);
             this.dataGridView1.DataSource = this.displayRegistrationBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,36 +70,6 @@ namespace ContainerVisualizer
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(740, 363);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // interfaceNameDataGridViewTextBoxColumn
-            // 
-            this.interfaceNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.interfaceNameDataGridViewTextBoxColumn.DataPropertyName = "InterfaceName";
-            this.interfaceNameDataGridViewTextBoxColumn.HeaderText = "Service";
-            this.interfaceNameDataGridViewTextBoxColumn.Name = "interfaceNameDataGridViewTextBoxColumn";
-            this.interfaceNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.interfaceNameDataGridViewTextBoxColumn.ToolTipText = "The service interface.";
-            // 
-            // implementationnameDataGridViewTextBoxColumn
-            // 
-            this.implementationnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.implementationnameDataGridViewTextBoxColumn.DataPropertyName = "ImplementationName";
-            this.implementationnameDataGridViewTextBoxColumn.HeaderText = "Implementation";
-            this.implementationnameDataGridViewTextBoxColumn.Name = "implementationnameDataGridViewTextBoxColumn";
-            this.implementationnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.implementationnameDataGridViewTextBoxColumn.ToolTipText = "Service implementation.";
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Name.DataPropertyName = "Name";
-            this.Name.HeaderText = "Registered Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // displayRegistrationBindingSource
-            // 
-            this.displayRegistrationBindingSource.DataSource = typeof(ContainerVisualizer.DisplayRegistration);
             // 
             // filetStringTextBox
             // 
@@ -153,6 +123,33 @@ namespace ContainerVisualizer
             this.tableLayoutPanel1.Size = new System.Drawing.Size(748, 401);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
+            // Name
+            // 
+            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Name.DataPropertyName = "Name";
+            this.Name.FillWeight = 200F;
+            this.Name.HeaderText = "Registered Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Interface
+            // 
+            this.Interface.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Interface.DataPropertyName = "InterfaceName";
+            this.Interface.FillWeight = 200F;
+            this.Interface.HeaderText = "Interface";
+            this.Interface.Name = "Interface";
+            this.Interface.ReadOnly = true;
+            // 
+            // Implementation
+            // 
+            this.Implementation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Implementation.DataPropertyName = "ImplementationName";
+            this.Implementation.FillWeight = 200F;
+            this.Implementation.HeaderText = "Implementation";
+            this.Implementation.Name = "Implementation";
+            this.Implementation.ReadOnly = true;
+            // 
             // ContainerViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -162,7 +159,7 @@ namespace ContainerVisualizer
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ContainerViewForm";
+            //this.Name = "ContainerViewForm";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "Windsor Container Debugger Visualizer";
             this.TopMost = true;
@@ -186,5 +183,7 @@ namespace ContainerVisualizer
         private DataGridViewTextBoxColumn interfaceNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn implementationnameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Interface;
+        private DataGridViewTextBoxColumn Implementation;
     }
 }

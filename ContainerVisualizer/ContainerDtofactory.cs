@@ -27,7 +27,7 @@ namespace ContainerVisualizer
                     registrations.Add(new RegistrationDto
                                           {
                                               InterfaceName = componentModel.Service.ToString(), 
-                                              Implementationname = componentModel.Implementation.ToString(),
+                                              ImplementationName = componentModel.Implementation.ToString(),
                                               Name = componentModel.Name
                                           } );
                 }

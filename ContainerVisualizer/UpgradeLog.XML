@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ContainerVisualizer">
+</Property><Property Name="Solution File" Value="D:\Projects\PersonalProjects\ContainerVisualizer\ContainerVisualizer\ContainerVisualizer.sln">
+</Property><Property Name="Date" Value="17 January 2011">
+</Property><Property Name="Time" Value="9:43 AM">
+</Property></Properties><Event ErrorLevel="0" Project="ContainerVisualizer" Source="ContainerVisualizer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ContainerVisualizer" Source="ContainerVisualizer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ContainerVisualizer.Tests" Source="..\ContainerVisualizer.Tests\ContainerVisualizer.Tests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ContainerVisualizer.Tests" Source="..\ContainerVisualizer.Tests\ContainerVisualizer.Tests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ContainerVisualizer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ContainerVisualizer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ContainerVisualizer" Source="ContainerVisualizer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="3" Project="" Source="ContainerVisualizer.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ContainerVisualizer.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="LocalTestRun.testrunconfig" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LocalTestRun.testrunconfig" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="0" Project="ContainerVisualizer.Tests" Source="..\ContainerVisualizer.Tests\ContainerVisualizer.Tests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

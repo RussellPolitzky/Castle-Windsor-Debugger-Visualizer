@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Windows.Forms;
 using Castle.Windsor;
 using ContainerVisualizer;
 using Microsoft.VisualStudio.DebuggerVisualizers;
@@ -21,7 +18,6 @@ namespace ContainerVisualizer
     /// </summary>
     public class ContainerVisualizer : DialogDebuggerVisualizer
     {
-
         /// <summary>
         /// </summary>
         /// <param name="windowService">An object of type <see cref="T:Microsoft.VisualStudio.DebuggerVisualizers.IDialogVisualizerService"/>, which provides methods your visualizer can use to display Windows forms, controls, and dialogs.</param>
@@ -40,11 +36,12 @@ namespace ContainerVisualizer
         /// <param name="objectToVisualize">The object to visualize.</param>
         public static void TestShowVisualizer(object objectToVisualize)
         {
-            var visualizerHost = new VisualizerDevelopmentHost(
+            VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(
                 objectToVisualize, 
                 typeof(ContainerVisualizer), 
                 typeof(WindsorContrainerObjectSource)
                 );
+
             visualizerHost.ShowVisualizer();
         }
 

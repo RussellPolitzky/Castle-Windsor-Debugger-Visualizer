@@ -13,11 +13,6 @@ namespace ContainerVisualizer
         /// Gets or sets the Registrations.
         /// </summary>
         /// <value>The Registrations.</value>
-        //public IDictionary<string, string> Registrations { get; set; }
-
-        //public IDictionary<string, string> Registrations { get; set; }
-
         public IList<RegistrationDto> Registrations { get; set; }
-
     }
 }

@@ -100,7 +100,7 @@ namespace ContainerVisualizer
                 .Select(registration => new DisplayRegistration
                                              {
                                                  InterfaceName = registration.InterfaceName,
-                                                 ImplementationName = registration.Implementationname,
+                                                 ImplementationName = registration.ImplementationName,
                                                  Name = registration.Name
                                              })
                 .OrderBy(reg => reg.InterfaceName + reg.ImplementationName + reg.Name)
@@ -108,17 +108,24 @@ namespace ContainerVisualizer
 
             if (!string.IsNullOrEmpty(_filterString))
             {
-                displayRegistrations = displayRegistrations
-                    .Where(dr => dr.ImplementationName.ToUpper().Contains(_filterString.ToUpper()) ||
-                                 dr.InterfaceName.ToUpper().Contains(_filterString.ToUpper()))
+                displayRegistrations = 
+                    displayRegistrations
+                    .Where(dr => containsIgnoringCase(dr.ImplementationName, _filterString) ||
+                                 containsIgnoringCase(dr.InterfaceName, _filterString) ||
+                                 containsIgnoringCase(dr.Name, _filterString))
                     .ToList();
             }
 
             displayRegistrationBindingSource.ResetBindings(true);
-            displayRegistrationBindingSource.DataSource = displayRegistrations.ToList();
+            displayRegistrationBindingSource.DataSource = displayRegistrations;
         }
 
         #endregion
+
+        private bool containsIgnoringCase(string stringToTest, string testString)
+        {
+            return stringToTest.ToUpper().Contains(testString.ToUpper());
+        }
 
     }
 }

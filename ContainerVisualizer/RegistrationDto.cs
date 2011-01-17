@@ -18,7 +18,7 @@ namespace ContainerVisualizer
         /// Gets or sets the implementationname.
         /// </summary>
         /// <value>The implementationname.</value>
-        public string Implementationname { get; set; }
+        public string ImplementationName { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
